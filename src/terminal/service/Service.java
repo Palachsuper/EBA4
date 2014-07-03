@@ -32,6 +32,7 @@ public class Service {
     public static void main() {
         WriteLog("=====================================================");
         HttpServer.main("");
+        WriteLog("sdfdsfsd");
     }
 
     public static void get_CPU_hash(){
