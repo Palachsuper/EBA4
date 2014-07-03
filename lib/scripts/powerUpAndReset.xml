@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	
+	
+	<command>
+		<send>RESET</send>
+	</command>
+
+	
+	<command>
+		<send maxSendTimes="1" answerCode="13">POLL</send> 
+	</command>
+
+<!--<command>
+		<send>GET_BILL_TABLE</send> 
+	</command>-->
+
+	<command>
+		<send>GET_STATUS</send>
+	</command>
+	
+	<command>
+		<send>SET_SECURITY</send>
+	</command>
+
+
+	<command>
+		<send maxSendTimes="10" answerCode="13,19">POLL</send>
+	</command>
+	
+	<command>
+		<send code="READY">STOP</send>
+	</command>
+	
+</script>

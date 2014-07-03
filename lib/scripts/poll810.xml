@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<command>
+		<send maxSendTimes="6" answerCode="13,19,1c62">POLL</send> <!-- INITIALIZING -->
+	</command>
+	
+	<command>
+		<send sendData="ff0000000000">ENABLE_BILL_TYPES</send>		
+	</command>
+	
+	<command repeat="forever">
+		<send maxSendTimes="1" process-answer="idling" answerCode="data">POLL</send> <!-- IDLING -->
+	</command>
+</script>

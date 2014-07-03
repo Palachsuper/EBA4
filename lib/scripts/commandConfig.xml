@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<commands>
+		<POLL>
+			<code>33</code>
+			<type>controller</type>
+			<wait-answer>yes</wait-answer>
+			<ack>00</ack>
+		</POLL>
+		<RESET>
+			<code>30</code>
+			<maxSendTimes>1</maxSendTimes>
+			<answerCode>00</answerCode>
+			<type>controller</type>
+			<wait-answer>yes</wait-answer>
+			<ack>00</ack>
+		</RESET>
+		<GET_STATUS>
+			<code>31</code>
+			<answerCode>data</answerCode>
+			<maxSendTimes>1</maxSendTimes>
+			<process-answer>getStatus</process-answer>
+			<type>controller</type>
+			<wait-answer>yes</wait-answer>
+			<ack>00</ack>
+		</GET_STATUS>
+		<SET_SECURITY>
+			<code>32</code>
+			<maxSendTimes>1</maxSendTimes>
+			<sendData>000000</sendData>
+			<answerCode>00</answerCode>
+			<type>controller</type>
+			<wait-answer>yes</wait-answer>
+			<ack>00</ack>
+		</SET_SECURITY>
+		<IDENTIFICATION>
+			<code>37</code>
+			<answerCode>data</answerCode>
+			<maxSendTimes>1</maxSendTimes>
+			<process-answer>deviceIdentification</process-answer>
+			<type>controller</type>
+			<wait-answer>yes</wait-answer>
+			<ack>00</ack>
+		</IDENTIFICATION>
+		<STACK>
+			<code>35</code>
+			<type>controller</type>
+		</STACK>
+		<DISPENSE>
+			<code>3C</code>
+			<type>controller</type>
+		</DISPENSE>
+		<HOLD>
+			<code>38</code>
+			<type>controller</type>
+		</HOLD>
+		<RETURN>
+			<code>36</code>
+			<type>controller</type>
+		</RETURN>		
+		<GET_BILL_TABLE>
+			<code>41</code>
+			<answerCode>data</answerCode>
+			<maxSendTimes>1</maxSendTimes>
+			<process-answer>getBillTable</process-answer>
+			<type>controller</type>
+			<wait-answer>yes</wait-answer>
+			<ack>00</ack>
+		</GET_BILL_TABLE>
+		<ENABLE_BILL_TYPES>
+			<code>34</code>
+			<sendData>FFFFFF000000</sendData>
+			<answerCode>data</answerCode>
+			<process-answer>enableBillTypes</process-answer>
+			<maxSendTimes>1</maxSendTimes>
+			<type>controller</type>
+			<wait-answer>yes</wait-answer>
+			<ack>00</ack>
+		</ENABLE_BILL_TYPES>
+		<CASSETTE_STATUS>
+			<code>3b</code>
+			<process-answer>getCassetteStatus</process-answer>
+			<answerCode>data</answerCode>
+			<maxSendTimes>1</maxSendTimes>
+			<type>controller</type>
+			<wait-answer>yes</wait-answer>
+			<ack>00</ack>
+		</CASSETTE_STATUS>
+		<REQUEST_STATISTICS>
+			<code>60</code>
+			<process-answer>requestStatistics</process-answer>
+			<answerCode>data</answerCode>
+			<maxSendTimes>1</maxSendTimes>
+			<type>controller</type>
+			<wait-answer>yes</wait-answer>
+		</REQUEST_STATISTICS>
+		
+		
+		
+		
+		<STOP>
+			<type>controller</type>
+		</STOP>
+	
+	
+	
+		<c-10>
+			<code>10</code>
+			<name>POWER UP</name>
+			<type>billAnswer</type>
+		</c-10>
+		<c-11>
+			<code>11</code>
+			<name>Power bill</name>
+			<type>billAnswer</type>
+		</c-11>
+		<c-12>
+			<code>12</code>
+			<name>Power up with bill</name>
+			<variant>
+				<c-00>
+					<name>Power up with bill in transport path</name>
+				</c-00>
+				<c-01>
+					<name>Power up with bill in dispender</name>
+				</c-01>
+			</variant>
+			<type>billAnswer</type>
+		</c-12>
+		<c-13>
+			<code>13</code>
+			<name>INITIALIZE</name>
+			<type>billAnswer</type>
+		</c-13>
+		<c-14>
+			<code>14</code>
+			<name>IDLING</name>
+			<type>billAnswer</type>
+		</c-14>
+		<c-15>
+			<code>15</code>
+			<name>ACCEPTING</name>
+			<type>billAnswer</type>
+		</c-15>
+		<c-17>
+			<code>17</code>
+			<name>STACKING</name>
+			<type>billAnswer</type>
+		</c-17>
+		<c-18>
+			<code>18</code>
+			<name>RETURNING</name>
+			<type>billAnswer</type>
+		</c-18>
+		<c-19>
+			<code>19</code>
+			<name>INIT DISABLE</name>
+			<type>billAnswer</type>
+		</c-19>
+		<c-1a>
+			<code>1a</code>
+			<name>HOLDING</name>
+			<type>billAnswer</type>
+		</c-1a>
+		<c-1b>
+			<code>1b</code>
+			<name>Device busy</name>
+			<type>billAnswer</type>
+		</c-1b>
+		<c-1c>
+			<code>1c</code>
+			<name>Errors</name>
+			<type>error</type>
+			<variant>
+				<c-60>
+					<name>Insertion Error</name>
+				</c-60>
+				<c-61>
+					<name>Magnetic Error</name>
+				</c-61>
+				<c-62>
+					<name>Bill renains in the head, and new bill is rejected</name>
+				</c-62>
+				<c-63>
+					<name>Compensation error/multiplying factor error</name>
+				</c-63>
+				<c-64>
+					<name>Conveying error</name>
+				</c-64>
+				<c-65>
+					<name>Identification error</name>
+				</c-65>
+				<c-66>
+					<name>Verification error</name>
+				</c-66>
+				<c-67>
+					<name>Optic error</name>
+				</c-67>
+			</variant>
+		</c-1c>
+		
+		
+	
+	
+	
+
+</commands>

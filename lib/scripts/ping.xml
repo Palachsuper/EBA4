@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<command>
+		<send maxSendTimes="1" answerCode="13,19">POLL</send> <!-- INITIALIZING -->	
+	</command>
+	
+	<command>
+		<send code="READY">STOP</send>
+	</command>
+</script>

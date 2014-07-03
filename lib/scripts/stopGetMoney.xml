@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	
+	<command repeat="forever">
+		<send maxSendTimes="1" process-answer="idling" answerCode="data" stop-repeat-code="14">POLL</send> <!-- IDLING -->
+	</command>
+	
+	<command>
+		<send sendData="000000" wait-answer="yes" maxSendTimes="2" answerCode="00">ENABLE_BILL_TYPES</send>		
+	</command>
+	
+	<command>
+		<send code="DISABLED">STOP</send>
+	</command>
+	
+	
+</script>
